@@ -50,7 +50,7 @@ def run_ui():
 
             #menu3 = HFill(g1, height=5)
 
-            g2 = Frame(root, VStackLayout(), border=False, opaque=False, title="Hallo World")
+            g2 = Frame(root, VStackLayout(), border=True, opaque=False, title="Hallo World")
 
             a = VFill(g2, width=20)
             b = VFill(g2, width=None)

@@ -132,9 +132,9 @@ def box(c_fsa,
     if title is not None:
         b_fsa[0:1, 1:bw-1] = [border_fmt(header(title, bw-2, bar=h_bar, left=left, right=right))]
 
-    b_fsa[1+spacing:1+spacing+h, 1+spacing:1+spacing+w] = c_fsa
-
+    blit(b_fsa, c_fsa, 1+spacing, 1+spacing, w, h)
     return b_fsa
+
 
 def blit(tgt, src, x=0, y=0, w=None, h=None):
     tw = tgt.width
@@ -149,7 +149,6 @@ def blit(tgt, src, x=0, y=0, w=None, h=None):
 
     sx = -min(0, x)
     sy = -min(0, y)
-
     tx = max(0, x)
     ty = max(0, y)
 
